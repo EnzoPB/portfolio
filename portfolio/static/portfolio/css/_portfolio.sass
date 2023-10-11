@@ -1,0 +1,114 @@
+@import 'colors'
+
+*
+  box-sizing: border-box
+
+*::selection
+  background-color: white
+  color: black
+
+html, body
+  padding: 0
+  margin: 0
+
+@font-face
+    font-family: 'VictorMono'
+    src: url(../fonts/victormono.ttf) format('truetype')
+
+body
+  font-family: 'VictorMono', monospace
+  background: $very-dark
+  color: $text-color
+  overflow: hidden
+
+main, #particles
+  position: absolute
+  top: 30px
+  bottom: 30px
+  left: 30px
+  right: 30px
+
+main
+  display: flex
+  border: 1px solid $light
+  outline: 30px solid $very-dark
+
+@keyframes particles-fadein
+  from
+    opacity: 0%
+  to
+    opacity: 100%
+
+#particles
+  transform: scale(1.4)
+  filter: blur(100px)
+  animation: particles-fadein 4s
+
+header
+  padding: 20px
+  display: flex
+  flex-direction: column
+  flex-grow: 0
+  flex-shrink: 0
+  border-right: 1px solid $light
+
+  .site_title, .site_subtitle
+    margin: 0
+    line-height: 1
+
+  .site_title
+    font-size: 50px
+    margin-left: -0.08em // fix pour espace en trop avant le premier caractère
+
+  .site_subtitle
+    font-size: 18px
+
+  nav
+    margin-top: 15px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 20px
+    
+    .button .label
+      text-decoration: underline
+      border: none
+
+    &.end
+      margin-top: auto
+      margin-bottom: 15px
+
+.button
+  text-decoration: none
+  .label
+    color: $text-color
+    padding: 5px 20px
+    border: 1px solid $very-light
+    display: inline-block
+    > *
+      vertical-align: middle
+    img, svg
+      width: 20px
+      height: 20px
+      color: $text-color
+  .arrow
+    opacity: 0
+    animation: nav-arrow 1s infinite step-end
+  &:hover
+    .label
+      background: $very-light
+      color: $very-dark
+      img, svg
+        color: $very-dark
+    .arrow
+      opacity: 1
+
+@keyframes nav-arrow
+  0%
+    color: $text-color
+  50%
+    color: transparent
+
+section.main
+  padding: 20px
+  display: flex

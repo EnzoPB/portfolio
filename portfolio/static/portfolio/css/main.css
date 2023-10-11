@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: white;
+  color: black;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "VictorMono";
+  src: url(../fonts/victormono.ttf) format("truetype");
+}
+body {
+  font-family: "VictorMono", monospace;
+  background: hsl(0, 0%, 5%);
+  color: white;
+  overflow: hidden;
+}
+
+main, #particles {
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+}
+
+main {
+  display: flex;
+  border: 1px solid hsl(0, 0%, 75%);
+  outline: 30px solid hsl(0, 0%, 5%);
+}
+
+@keyframes particles-fadein {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+#particles {
+  transform: scale(1.4);
+  filter: blur(100px);
+  animation: particles-fadein 4s;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  border-right: 1px solid hsl(0, 0%, 75%);
+}
+header .site_title, header .site_subtitle {
+  margin: 0;
+  line-height: 1;
+}
+header .site_title {
+  font-size: 50px;
+  margin-left: -0.08em;
+}
+header .site_subtitle {
+  font-size: 18px;
+}
+header nav {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+header nav .button .label {
+  text-decoration: underline;
+  border: none;
+}
+header nav.end {
+  margin-top: auto;
+  margin-bottom: 15px;
+}
+
+.button {
+  text-decoration: none;
+}
+.button .label {
+  color: white;
+  padding: 5px 20px;
+  border: 1px solid hsl(0, 0%, 95%);
+  display: inline-block;
+}
+.button .label > * {
+  vertical-align: middle;
+}
+.button .label img, .button .label svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+.button .arrow {
+  opacity: 0;
+  animation: nav-arrow 1s infinite step-end;
+}
+.button:hover .label {
+  background: hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 5%);
+}
+.button:hover .label img, .button:hover .label svg {
+  color: hsl(0, 0%, 5%);
+}
+.button:hover .arrow {
+  opacity: 1;
+}
+
+@keyframes nav-arrow {
+  0% {
+    color: white;
+  }
+  50% {
+    color: transparent;
+  }
+}
+section.main {
+  padding: 20px;
+  display: flex;
+}
+
+.aboutme {
+  width: 50%;
+  margin: 0 auto;
+  align-self: center;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */

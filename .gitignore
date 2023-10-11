@@ -1,0 +1,5 @@
+.fleet/
+.vscode/
+.idea/
+venv/
+portfolio/static/portfolio/css/.sass-cache
