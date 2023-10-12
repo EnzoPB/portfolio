@@ -8,6 +8,20 @@ from django.utils.translation import gettext
 from .models import Project
 
 
-class IndexView(generic.ListView):
-    template_name = 'portfolio/index.html'
-    model = Project
+def index(request):
+    return render(
+        request,
+        'portfolio/index.html'
+    )
+
+def projects(request):
+    return render(
+        request,
+        'portfolio/projects.html'
+    )
+
+def contact(request):
+    return render(
+        request,
+        'portfolio/contact.html'
+    )
