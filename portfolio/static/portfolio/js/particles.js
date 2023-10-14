@@ -16,6 +16,7 @@ class Particles {
     }
 
     update() {
+        ctx.fillStyle = window.getComputedStyle(canvas).color;
         // change the speed
         this.speedX += Math.floor(Math.random() * 3) - 1;
         this.speedY += Math.floor(Math.random() * 3) - 1;
@@ -67,7 +68,6 @@ var ctx;
 function init() {
     canvas = document.getElementById('particles');
     ctx = canvas.getContext('2d');
-    ctx.fillStyle = '#555';
     resetSize();
     window.requestAnimationFrame(draw);
     for (let i = 0; i < 10; i++) {
