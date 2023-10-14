@@ -80,6 +80,7 @@ header nav {
   gap: 20px;
 }
 header nav .button .label {
+  background: none;
   text-decoration: underline;
   border: none;
 }
@@ -88,46 +89,6 @@ header nav.end {
   margin-bottom: 15px;
 }
 
-.button {
-  text-decoration: none;
-}
-.button .label {
-  color: white;
-  padding: 5px 20px;
-  border: 1px solid hsl(0, 0%, 95%);
-  display: inline-block;
-}
-.button .label > * {
-  vertical-align: middle;
-}
-.button .label img, .button .label svg {
-  width: 20px;
-  height: 20px;
-  color: white;
-}
-.button .arrow {
-  opacity: 0;
-  animation: nav-arrow 1s infinite step-end;
-}
-.button:hover .label {
-  background: hsl(0, 0%, 95%);
-  color: hsl(0, 0%, 5%);
-}
-.button:hover .label img, .button:hover .label svg {
-  color: hsl(0, 0%, 5%);
-}
-.button:hover .arrow {
-  opacity: 1;
-}
-
-@keyframes nav-arrow {
-  0% {
-    color: white;
-  }
-  50% {
-    color: transparent;
-  }
-}
 @keyframes fade-out {
   from {
     opacity: 1;
@@ -145,6 +106,7 @@ header nav.end {
   }
 }
 #main {
+  width: 100%;
   padding: 20px;
   display: flex;
 }
@@ -155,7 +117,113 @@ header nav.end {
   animation: fade-in 0.3s;
 }
 
+.button {
+  font-family: "VictorMono", monospace;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  border: none;
+  text-decoration: none;
+}
+.button .label {
+  color: white;
+  padding: 5px 25px;
+  background: hsl(0, 0%, 8%);
+  border-bottom: 2px solid hsl(0, 0%, 95%);
+  display: inline-block;
+}
+.button .label > * {
+  vertical-align: middle;
+}
+.button .label img, .button .label svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+.button .arrow {
+  opacity: 0;
+  animation: btn-arrow 1s infinite step-end;
+}
+.button:hover .label {
+  background: hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 5%);
+}
+.button:hover .label img, .button:hover .label svg {
+  color: hsl(0, 0%, 5%);
+}
+.button:hover .arrow {
+  opacity: 1;
+}
+
+/*.button
+ * font-family: 'VictorMono', monospace
+ * font-size: 20px
+ * cursor: pointer
+ * padding: 0
+ * background: none
+ * border: none
+ * text-decoration: none
+ * .label
+ *  color: $text-color
+ *  padding: 5px 25px
+ *  border: 1px solid $very-light
+ *  display: inline-block
+ *  > *
+ *    vertical-align: middle
+ *  img, svg
+ *    width: 20px
+ *    height: 20px
+ *    color: $text-color
+ * .arrow
+ *  opacity: 0
+ *  animation: btn-arrow 1s infinite step-end
+ * &:hover
+ *  .label
+ *    background: $very-light
+ *    color: $very-dark
+ *    img, svg
+ *      color: $very-dark
+ *  .arrow
+ *    opacity: 1*/
+@keyframes btn-arrow {
+  0% {
+    color: white;
+  }
+  50% {
+    color: transparent;
+  }
+}
+.input-label {
+  display: block;
+  text-align: left;
+}
+
+.input {
+  font-family: "VictorMono", monospace;
+  background: hsl(0, 0%, 8%);
+  border: none;
+  border-bottom: 1px solid hsl(0, 0%, 95%);
+  color: white;
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  outline: none;
+  margin-bottom: 10px;
+}
+.input:hover, .input:focus {
+  margin-bottom: 8px;
+  border-width: 3px;
+}
+
 .aboutme {
+  width: 50%;
+  margin: 0 auto;
+  align-self: center;
+  text-align: center;
+}
+
+.contact {
   width: 50%;
   margin: 0 auto;
   align-self: center;

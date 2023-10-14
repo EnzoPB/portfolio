@@ -73,43 +73,13 @@ header
     gap: 20px
     
     .button .label
+      background: none
       text-decoration: underline
       border: none
 
     &.end
       margin-top: auto
       margin-bottom: 15px
-
-.button
-  text-decoration: none
-  .label
-    color: $text-color
-    padding: 5px 20px
-    border: 1px solid $very-light
-    display: inline-block
-    > *
-      vertical-align: middle
-    img, svg
-      width: 20px
-      height: 20px
-      color: $text-color
-  .arrow
-    opacity: 0
-    animation: nav-arrow 1s infinite step-end
-  &:hover
-    .label
-      background: $very-light
-      color: $very-dark
-      img, svg
-        color: $very-dark
-    .arrow
-      opacity: 1
-
-@keyframes nav-arrow
-  0%
-    color: $text-color
-  50%
-    color: transparent
 
 @keyframes fade-out
   from
@@ -124,6 +94,7 @@ header
     opacity: 1
 
 #main
+  width: 100%
   padding: 20px
   display: flex
   &.htmx-swapping
