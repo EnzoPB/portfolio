@@ -1,0 +1,30 @@
+.projects-page
+  width: 90%!important
+  align-self: normal!important
+  overflow-y: auto
+
+.projects
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 15px
+  .project
+    height: 200px
+    overflow-y: hidden
+    position: relative
+    &:hover
+      outline: 2px solid $very-light
+    &> .project-image
+      left: 0
+      width: 100%
+      position: absolute
+    &> .project-body
+      background: $not-so-very-dark
+      color: $text-color
+      padding: 10px
+      bottom: 0
+      width: 100%
+      position: absolute
+      &> .project-title
+        margin: 0
+      &> .project-description
+        margin: 0

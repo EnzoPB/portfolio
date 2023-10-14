@@ -56,6 +56,7 @@ main {
 
 header {
   padding: 20px;
+  padding-right: 50px;
   display: flex;
   flex-direction: column;
   flex-grow: 0;
@@ -84,6 +85,10 @@ header nav .button .label {
   background: none;
   text-decoration: underline;
   border: none;
+  padding: 5px 10px;
+}
+header nav .button .label:hover {
+  text-decoration: none;
 }
 header nav.end {
   margin-top: auto;
@@ -116,6 +121,12 @@ header nav.end {
 }
 #main.htmx-settling {
   animation: fade-in 0.3s;
+}
+#main > .content {
+  width: 50%;
+  margin: 0 auto;
+  align-self: center;
+  text-align: center;
 }
 
 .button {
@@ -217,18 +228,43 @@ header nav.end {
   border-width: 3px;
 }
 
-.aboutme {
-  width: 50%;
-  margin: 0 auto;
-  align-self: center;
-  text-align: center;
+.projects-page {
+  width: 90% !important;
+  align-self: normal !important;
+  overflow-y: auto;
 }
 
-.contact {
-  width: 50%;
-  margin: 0 auto;
-  align-self: center;
-  text-align: center;
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.projects .project {
+  height: 200px;
+  overflow-y: hidden;
+  position: relative;
+}
+.projects .project:hover {
+  outline: 2px solid hsl(0, 0%, 95%);
+}
+.projects .project > .project-image {
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
+.projects .project > .project-body {
+  background: hsl(0, 0%, 8%);
+  color: white;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+.projects .project > .project-body > .project-title {
+  margin: 0;
+}
+.projects .project > .project-body > .project-description {
+  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
