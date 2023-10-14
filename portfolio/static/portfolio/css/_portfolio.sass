@@ -49,6 +49,7 @@ main
 
 header
   padding: 20px
+  padding-right: 50px
   display: flex
   flex-direction: column
   flex-grow: 0
@@ -77,6 +78,9 @@ header
       background: none
       text-decoration: underline
       border: none
+      padding: 5px 10px
+      &:hover
+        text-decoration: none
 
     &.end
       margin-top: auto
@@ -102,3 +106,8 @@ header
     animation: fade-out 0.3s
   &.htmx-settling
     animation: fade-in 0.3s
+  &> .content
+    width: 50%
+    margin: 0 auto
+    align-self: center
+    text-align: center

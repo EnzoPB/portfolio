@@ -1,8 +1,8 @@
 {% load i18n static %}
 {% include 'portfolio/header.html' %}
 
-<div class="contact">
-    <h2>Contact</h2>
+<div class="content">
+    <h2>{% trans 'Contact' %}</h2>
     <form method="post">
         <label class="input-label" for="name">{% trans 'Your name' %}</label>
         <input class="input" type="text" id="name" name="name" maxlength="100" required>

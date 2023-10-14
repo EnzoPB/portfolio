@@ -14,11 +14,13 @@ def index(request):
         'portfolio/index.html'
     )
 
+
 def projects(request):
     return render(
         request,
         'portfolio/projects.html'
     )
+
 
 def contact(request):
     return render(
