@@ -27,3 +27,10 @@ def contact(request):
         request,
         'portfolio/contact.html'
     )
+
+
+def project_detail(request, project_id):
+    return render(
+        request,
+        'portfolio/project_detail.html'
+    )

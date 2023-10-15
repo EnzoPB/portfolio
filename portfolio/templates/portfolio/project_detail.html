@@ -1,0 +1,46 @@
+{% load i18n static %}
+{% include 'portfolio/header.html' %}
+
+<div class="content project-detail-page">
+    <img class="project-image" src="https://placehold.co/600x400/EEE/31343C.png" alt="">
+    <h2>Project</h2>
+    <p class="project-full-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna fringilla urna porttitor rhoncus. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Ut sem viverra aliquet eget. Mattis aliquam faucibus purus in massa tempor nec feugiat. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Sit amet tellus cras adipiscing enim eu. Enim praesent elementum facilisis leo vel fringilla est ullamcorper eget. Curabitur vitae nunc sed velit dignissim sodales. Tempus urna et pharetra pharetra massa massa ultricies. Quis auctor elit sed vulputate.
+<br>
+        Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Interdum velit euismod in pellentesque massa placerat duis ultricies. Ligula ullamcorper malesuada proin libero nunc consequat interdum. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Quis lectus nulla at volutpat diam ut. Volutpat sed cras ornare arcu. Blandit volutpat maecenas volutpat blandit aliquam. Laoreet suspendisse interdum consectetur libero id. Pharetra convallis posuere morbi leo urna molestie at elementum. Est ante in nibh mauris cursus mattis. Faucibus in ornare quam viverra orci. Tincidunt tortor aliquam nulla facilisi cras fermentum. Faucibus scelerisque eleifend donec pretium vulputate sapien. Vitae turpis massa sed elementum tempus egestas. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Netus et malesuada fames ac. Turpis cursus in hac habitasse platea. Ac tincidunt vitae semper quis lectus.
+<br>
+        Enim ut sem viverra aliquet eget sit amet. Sit amet cursus sit amet dictum sit. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. In mollis nunc sed id semper. Donec massa sapien faucibus et molestie ac feugiat sed. Sed lectus vestibulum mattis ullamcorper. Pulvinar pellentesque habitant morbi tristique senectus. Eu nisl nunc mi ipsum. Cursus sit amet dictum sit. Consequat mauris nunc congue nisi vitae.
+<br>
+        Tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Eros in cursus turpis massa tincidunt dui. Bibendum at varius vel pharetra vel. Tristique magna sit amet purus gravida quis blandit. Felis bibendum ut tristique et egestas quis ipsum suspendisse. Elementum curabitur vitae nunc sed velit dignissim. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin. Vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales.
+<br>
+        Malesuada pellentesque elit eget gravida. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Imperdiet proin fermentum leo vel orci. Suspendisse in est ante in nibh mauris cursus. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Nibh ipsum consequat nisl vel. Velit egestas dui id ornare arcu. Adipiscing at in tellus integer feugiat scelerisque varius. Lectus sit amet est placerat in egestas erat imperdiet. Elementum facilisis leo vel fringilla est. Odio ut sem nulla pharetra diam sit amet nisl. Elementum facilisis leo vel fringilla est. Id interdum velit laoreet id donec ultrices tincidunt arcu non. Eu facilisis sed odio morbi quis.
+    </p>
+    <h3>{% trans 'Used technologies' %}</h3>
+    <div class="project-techs">
+        <span class="tag">{% trans 'Python' %}</span>
+        <span class="tag">{% trans 'HTML/CSS' %}</span>
+        <span class="tag">{% trans 'SASS' %}</span>
+        <span class="tag">{% trans 'JavaScript' %}</span>
+        <span class="tag">{% trans 'Django' %}</span>
+    </div>
+    <h3>{% trans 'Links' %}</h3>
+    <div class="project-links">
+        <a href="https://github.com/EnzoPB/portfolio" target="_blank" class="button">
+            <span class="arrow">> </span>
+            <span class="label">
+                <span>{% trans 'Github repo' %}</span>
+                <svg viewBox="0 0 98 98" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/></svg>
+            </span>
+        </a>
+
+        <a href="https://github.com/EnzoPB/portfolio" target="_blank" class="button">
+            <span class="arrow">> </span>
+            <span class="label">
+                <span>{% trans 'Github repo' %}</span>
+                <svg viewBox="0 0 98 98" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/></svg>
+            </span>
+        </a>
+    </div>
+</div>
+
+{% include 'portfolio/footer.html' %}
