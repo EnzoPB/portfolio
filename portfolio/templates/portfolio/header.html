@@ -16,15 +16,15 @@
         <h1 class="site_title">{% trans "Enzo PB" %}</h1>
         <h3 class="site_subtitle">{% trans "Engineering student" %}</h3>
         <nav>
-            <a href="/" hx-get="/" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="button">
+            <a href="{% url 'portfolio:index' %}" hx-get="{% url 'portfolio:index' %}" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="button">
                 <span class="arrow">> </span>
                 <span class="label">{% trans "Home" %}</span>
             </a>
-            <a href="projects" hx-get="projects" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="button">
+            <a href="{% url 'portfolio:projects' %}" hx-get="{% url 'portfolio:projects' %}" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="button">
                 <span class="arrow">> </span>
                 <span class="label">{% trans "Projects" %}</span>
             </a>
-            <a href="contact" hx-get="contact" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="button">
+            <a href="{% url 'portfolio:contact' %}" hx-get="{% url 'portfolio:contact' %}" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="button">
                 <span class="arrow">> </span>
                 <span class="label">{% trans "Contact" %}</span>
             </a>
