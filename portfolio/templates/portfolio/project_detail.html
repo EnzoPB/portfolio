@@ -2,7 +2,7 @@
 {% include 'portfolio/header.html' %}
 
 <div class="content project-detail-page">
-    <img class="project-image" src="{{ project.image }}" alt="">
+    <img class="project-image" src="{{ project.image.url }}" alt="">
     <h2>{{ project.title }}</h2>
     <p class="project-full-description">
         {{ project.description }}

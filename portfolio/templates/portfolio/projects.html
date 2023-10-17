@@ -6,7 +6,7 @@
     <div class="projects">
         {% for project in project_list %}
         	<a href="{% url 'portfolio:project detail' project.id %}" hx-get="{% url 'portfolio:project detail' project.id %}" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="project">
-                <img class="project-image" src="{{ project.image }}" alt="{{ project.title }}">
+                <img class="project-image" src="{{ project.image.url }}" alt="{{ project.title }}">
                 <div class="project-body">
                     <h3 class="project-title">{{ project.title }}</h3>
                     <p class="project-description">{{ project.title }}</p>

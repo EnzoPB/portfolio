@@ -287,6 +287,9 @@ header nav.end {
   align-self: normal !important;
   overflow-y: auto;
 }
+.project-detail-page .project-image {
+  max-width: 70%;
+}
 
 .project-full-description {
   text-align: justify;
