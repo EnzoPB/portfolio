@@ -100,6 +100,14 @@ header nav.end {
   background: hsl(0, 0%, 8%);
   border-bottom: 2px solid hsl(0, 0%, 95%);
 }
+.tag > * {
+  vertical-align: middle;
+}
+.tag img, .tag svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
 
 @keyframes fade-out {
   from {
@@ -282,6 +290,13 @@ header nav.end {
 
 .project-full-description {
   text-align: justify;
+}
+
+.project-techs > .tag:not(:first-child) {
+  margin-left: 10px;
+}
+.project-techs > * {
+  vertical-align: middle;
 }
 
 /*# sourceMappingURL=main.css.map */
