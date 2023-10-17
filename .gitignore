@@ -3,3 +3,4 @@
 .idea/
 venv/
 portfolio/static/portfolio/css/.sass-cache
+portfolio/migrations

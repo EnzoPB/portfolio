@@ -18,7 +18,10 @@ def index(request):
 def projects(request):
     return render(
         request,
-        'portfolio/projects.html'
+        'portfolio/projects.html',
+        {
+            'project_list': Project.objects.all()
+        }
     )
 
 
@@ -30,7 +33,11 @@ def contact(request):
 
 
 def project_detail(request, project_id):
+    project = get_object_or_404(Project, pk=project_id)
     return render(
         request,
-        'portfolio/project_detail.html'
+        'portfolio/project_detail.html',
+        {
+            'project': project
+        }
     )

@@ -2,54 +2,30 @@
 {% include 'portfolio/header.html' %}
 
 <div class="content project-detail-page">
-    <img class="project-image" src="https://placehold.co/600x400/EEE/31343C.png" alt="">
-    <h2>Project</h2>
+    <img class="project-image" src="{{ project.image }}" alt="">
+    <h2>{{ project.title }}</h2>
     <p class="project-full-description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna fringilla urna porttitor rhoncus. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Ut sem viverra aliquet eget. Mattis aliquam faucibus purus in massa tempor nec feugiat. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Sit amet tellus cras adipiscing enim eu. Enim praesent elementum facilisis leo vel fringilla est ullamcorper eget. Curabitur vitae nunc sed velit dignissim sodales. Tempus urna et pharetra pharetra massa massa ultricies. Quis auctor elit sed vulputate.
-<br>
-        Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Interdum velit euismod in pellentesque massa placerat duis ultricies. Ligula ullamcorper malesuada proin libero nunc consequat interdum. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Quis lectus nulla at volutpat diam ut. Volutpat sed cras ornare arcu. Blandit volutpat maecenas volutpat blandit aliquam. Laoreet suspendisse interdum consectetur libero id. Pharetra convallis posuere morbi leo urna molestie at elementum. Est ante in nibh mauris cursus mattis. Faucibus in ornare quam viverra orci. Tincidunt tortor aliquam nulla facilisi cras fermentum. Faucibus scelerisque eleifend donec pretium vulputate sapien. Vitae turpis massa sed elementum tempus egestas. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Netus et malesuada fames ac. Turpis cursus in hac habitasse platea. Ac tincidunt vitae semper quis lectus.
-<br>
-        Enim ut sem viverra aliquet eget sit amet. Sit amet cursus sit amet dictum sit. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. In mollis nunc sed id semper. Donec massa sapien faucibus et molestie ac feugiat sed. Sed lectus vestibulum mattis ullamcorper. Pulvinar pellentesque habitant morbi tristique senectus. Eu nisl nunc mi ipsum. Cursus sit amet dictum sit. Consequat mauris nunc congue nisi vitae.
-<br>
-        Tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Eros in cursus turpis massa tincidunt dui. Bibendum at varius vel pharetra vel. Tristique magna sit amet purus gravida quis blandit. Felis bibendum ut tristique et egestas quis ipsum suspendisse. Elementum curabitur vitae nunc sed velit dignissim. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin. Vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales.
-<br>
-        Malesuada pellentesque elit eget gravida. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Imperdiet proin fermentum leo vel orci. Suspendisse in est ante in nibh mauris cursus. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Nibh ipsum consequat nisl vel. Velit egestas dui id ornare arcu. Adipiscing at in tellus integer feugiat scelerisque varius. Lectus sit amet est placerat in egestas erat imperdiet. Elementum facilisis leo vel fringilla est. Odio ut sem nulla pharetra diam sit amet nisl. Elementum facilisis leo vel fringilla est. Id interdum velit laoreet id donec ultrices tincidunt arcu non. Eu facilisis sed odio morbi quis.
+        {{ project.description }}
     </p>
     <h3>{% trans 'Used technologies' %}</h3>
     <div class="project-techs">
+        {% for skill in project.skills.all %}
         <span class="tag">
-            <span>{% trans 'Python' %}</span>
-            {% component 'svg' src='portfolio/images/python.svg' %}</span>
-        <span class="tag">
-            <span>{% trans 'HTML/CSS' %}</span>
-            {% component 'svg' src='portfolio/images/html.svg' %}</span>
-        <span class="tag">
-            <span>{% trans 'SASS' %}</span>
-            {% component 'svg' src='portfolio/images/sass.svg' %}</span>
-        <span class="tag">
-            <span>{% trans 'JavaScript' %}</span>
-            {% component 'svg' src='portfolio/images/js.svg' %}</span>
-        <span class="tag">
-            <span>{% trans 'Django' %}</span>
-            {% component 'svg' src='portfolio/images/django.svg' %}</span>
+            <span>{{ skill.name }}</span>
+            {% component 'svg' src='portfolio/images/'|add:skill.icon|add:'.svg' %}</span>
+        {% endfor %}
     </div>
     <h3>{% trans 'Links' %}</h3>
     <div class="project-links">
-        <a href="https://github.com/EnzoPB/portfolio" target="_blank" class="button">
+        {% for link in project.projectlink_set.all %}
+        <a href="{{ link.url }}" target="_blank" class="button">
             <span class="arrow">> </span>
             <span class="label">
-                <span>{% trans 'Github repo' %}</span>
-                {% component 'svg' src='portfolio/images/github.svg' %}
+                <span>{{ link.label }}</span>
+                {% component 'svg' src='portfolio/images/'|add:link.icon|add:'.svg' %}
             </span>
         </a>
-
-        <a href="https://github.com/EnzoPB/portfolio" target="_blank" class="button">
-            <span class="arrow">> </span>
-            <span class="label">
-                <span>{% trans 'Github repo' %}</span>
-                {% component 'svg' src='portfolio/images/github.svg' %}
-            </span>
-        </a>
+        {% endfor %}
     </div>
 </div>
 

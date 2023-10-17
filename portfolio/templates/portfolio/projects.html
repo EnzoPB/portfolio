@@ -4,16 +4,15 @@
 <div class="content projects-page">
     <h2>{% trans 'Projects' %}</h2>
     <div class="projects">
-        {% for i in '1234567890123'|make_list %}
-        	<a href="{% url 'portfolio:project detail' i %}" hx-get="{% url 'portfolio:project detail' i %}" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="project">
-                <img class="project-image" src="https://placehold.co/300x100/EEE/31343C.png" alt="Project #{{ i }}">
+        {% for project in project_list %}
+        	<a href="{% url 'portfolio:project detail' project.id %}" hx-get="{% url 'portfolio:project detail' project.id %}" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="project">
+                <img class="project-image" src="{{ project.image }}" alt="{{ project.title }}">
                 <div class="project-body">
-                    <h3 class="project-title">Project #{{ i }}</h3>
-                    <p class="project-description">ezofnezg eobgr ehozfeu gehu zhgzo gezi ezh</p>
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <p class="project-description">{{ project.title }}</p>
                 </div>
             </a>
         {% endfor %}
-
     </div>
 </div>
 

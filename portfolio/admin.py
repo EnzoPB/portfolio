@@ -1,3 +1,18 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import *
+
+admin.site.site_header = 'Administration enzopb.me'
+
+class LinkInline(admin.TabularInline):
+    model = ProjectLink
+    extra = 1
+
+@admin.register(Project)
+class ProjectAdmin(admin.ModelAdmin):
+    inlines = [LinkInline]
+    list_display = ['title', 'short_description']
+    search_fields = ['title', 'description']
+    filter_horizontal = ['skills']
+
+admin.site.register(ProjectSkill)
