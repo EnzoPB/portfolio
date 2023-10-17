@@ -17,7 +17,7 @@ class Project(models.Model):
     title = models.CharField(max_length=50)
     short_description = models.CharField('short description', max_length=200)
     description = models.TextField()
-    image = models.ImageField()
+    image = models.ImageField(upload_to='media/')
     skills = models.ManyToManyField(ProjectSkill)
 
     def __str__(self):
