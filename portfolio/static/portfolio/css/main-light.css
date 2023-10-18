@@ -1,0 +1,330 @@
+* {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: white;
+  color: black;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "VictorMono";
+  src: url(../fonts/victormono.ttf) format("truetype");
+}
+body {
+  font-family: "VictorMono", monospace;
+  background: hsl(0, 0%, 95%);
+  color: black;
+  overflow: hidden;
+}
+
+main, #particles {
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+}
+
+main {
+  display: flex;
+  border: 1px solid hsl(0, 0%, 25%);
+  outline: 30px solid hsl(0, 0%, 95%);
+}
+
+@keyframes particles-fadein {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+#particles {
+  transform: scale(1.4);
+  filter: blur(100px);
+  animation: particles-fadein 4s;
+  width: 100%;
+  height: 100%;
+  color: hsl(0, 0%, 90%);
+}
+
+.link {
+  color: black;
+}
+
+hr {
+  background-color: hsl(0, 0%, 25%);
+  height: 1px;
+  border: none;
+  margin: 15px 0;
+}
+
+.tag {
+  padding: 5px 15px;
+  background: hsl(0, 0%, 92%);
+  border-bottom: 2px solid hsl(0, 0%, 5%);
+}
+.tag > * {
+  vertical-align: middle;
+}
+.tag img, .tag svg {
+  width: 20px;
+  height: 20px;
+  color: black;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#main {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+}
+#main.htmx-swapping {
+  animation: fade-out 0.3s;
+}
+#main.htmx-settling {
+  animation: fade-in 0.3s;
+}
+#main > .content {
+  width: 50%;
+  margin: 0 auto;
+  align-self: center;
+  text-align: center;
+}
+
+.button {
+  font-family: "VictorMono", monospace;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  border: none;
+  text-decoration: none;
+}
+.button .label {
+  color: black;
+  padding: 5px 25px;
+  background: hsl(0, 0%, 92%);
+  border-bottom: 2px solid hsl(0, 0%, 5%);
+  display: inline-block;
+}
+.button .label > * {
+  vertical-align: middle;
+}
+.button .label img, .button .label svg {
+  width: 20px;
+  height: 20px;
+  color: black;
+}
+.button .arrow {
+  opacity: 0;
+  animation: btn-arrow 1s infinite step-end;
+}
+.button:hover .label {
+  background: hsl(0, 0%, 5%);
+  color: hsl(0, 0%, 95%);
+}
+.button:hover .label img, .button:hover .label svg {
+  color: hsl(0, 0%, 95%);
+}
+.button:hover .arrow {
+  opacity: 1;
+}
+
+/*.button
+ * font-family: 'VictorMono', monospace
+ * font-size: 20px
+ * cursor: pointer
+ * padding: 0
+ * background: none
+ * border: none
+ * text-decoration: none
+ * .label
+ *  color: $text-color
+ *  padding: 5px 25px
+ *  border: 1px solid $very-light
+ *  display: inline-block
+ *  > *
+ *    vertical-align: middle
+ *  img, svg
+ *    width: 20px
+ *    height: 20px
+ *    color: $text-color
+ * .arrow
+ *  opacity: 0
+ *  animation: btn-arrow 1s infinite step-end
+ * &:hover
+ *  .label
+ *    background: $very-light
+ *    color: $very-dark
+ *    img, svg
+ *      color: $very-dark
+ *  .arrow
+ *    opacity: 1*/
+@keyframes btn-arrow {
+  0% {
+    color: black;
+  }
+  50% {
+    color: transparent;
+  }
+}
+.input-label {
+  display: block;
+  text-align: left;
+}
+
+.input {
+  font-family: "VictorMono", monospace;
+  background: hsl(0, 0%, 92%);
+  border: none;
+  border-bottom: 1px solid hsl(0, 0%, 5%);
+  color: black;
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  outline: none;
+  margin-bottom: 10px;
+}
+.input:hover, .input:focus {
+  margin-bottom: 8px;
+  border-width: 3px;
+}
+
+header {
+  padding: 20px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  border-right: 1px solid hsl(0, 0%, 25%);
+}
+header .site_title, header .site_subtitle {
+  margin: 0;
+  line-height: 1;
+}
+header .site_title {
+  font-size: 50px;
+  margin-left: -0.08em;
+}
+header .site_subtitle {
+  font-size: 18px;
+}
+header nav {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+header nav .button .label {
+  background: none;
+  text-decoration: underline;
+  border: none;
+  padding: 5px 10px;
+}
+header nav .button .label:hover {
+  text-decoration: none;
+}
+header nav.end {
+  margin-top: auto;
+  margin-bottom: 0;
+  flex-direction: row;
+}
+header nav.end .button .label {
+  line-height: 1;
+  padding: 10px;
+}
+
+.contact-page .contact-submit-button {
+  margin-left: auto;
+  margin-right: 0;
+  display: block;
+}
+.contact-page .email-container {
+  font-size: 20px;
+}
+
+.projects-page {
+  width: 90% !important;
+  align-self: normal !important;
+  overflow-y: auto;
+  padding: 2px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.projects .project {
+  height: 200px;
+  overflow-y: hidden;
+  position: relative;
+}
+.projects .project:hover {
+  outline: 2px solid hsl(0, 0%, 5%);
+}
+.projects .project > .project-image {
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
+.projects .project > .project-body {
+  background: hsl(0, 0%, 92%);
+  color: black;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+.projects .project > .project-body > .project-title {
+  margin: 0;
+}
+.projects .project > .project-body > .project-description {
+  margin: 0;
+}
+
+.project-detail-page {
+  width: 80% !important;
+  align-self: normal !important;
+  overflow-y: auto;
+}
+.project-detail-page .project-image {
+  max-width: 70%;
+}
+
+.project-full-description {
+  text-align: justify;
+}
+
+.project-techs > .tag:not(:first-child) {
+  margin-left: 10px;
+}
+.project-techs > * {
+  vertical-align: middle;
+}
+
+/*# sourceMappingURL=main-light.css.map */

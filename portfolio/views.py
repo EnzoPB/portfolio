@@ -54,3 +54,17 @@ def set_language(request, lang):
     response = redirect('portfolio:index')
     response.set_cookie(settings.LANGUAGE_COOKIE_NAME, new_language)
     return response
+
+def set_theme(request, theme):
+    new_theme = 'dark'
+    if theme in settings.THEMES:
+        new_theme = theme
+    elif theme == 'switch':
+        if request.COOKIES['theme'] == 'dark':
+            new_theme = 'light'
+        else:
+            new_theme = 'dark'
+
+    response = redirect('portfolio:index')
+    response.set_cookie('theme', new_theme)
+    return response

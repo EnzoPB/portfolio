@@ -6,7 +6,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static 'portfolio/css/main.css' %}">
+    {% if request.COOKIES.theme == 'dark' %}
+    <link rel="stylesheet" id="theme-css" href="{% static 'portfolio/css/main-dark.css' %}">
+    {% else %}
+    <link rel="stylesheet" id="theme-css" href="{% static 'portfolio/css/main-light.css' %}">
+    {% endif %}
     <title>{% trans 'portfolio site title' %}</title>
 </head>
 <body>
@@ -44,7 +48,7 @@
                 <span class="label">{% component 'svg' src='portfolio/images/language.svg' %}</span>
             </a>
 
-            <a href="#" class="button">
+            <a href="{% url 'portfolio:set theme' 'switch' %}" class="button">
                 <span class="label">{% component 'svg' src='portfolio/images/theme.svg' %}</span>
             </a>
         </nav>

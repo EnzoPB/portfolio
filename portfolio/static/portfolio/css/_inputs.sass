@@ -1,5 +1,3 @@
-@import 'colors'
-
 .button
   font-family: 'VictorMono', monospace
   font-size: 20px
@@ -9,26 +7,26 @@
   border: none
   text-decoration: none
   .label
-    color: $text-color
+    color: colors.$text-color
     padding: 5px 25px
-    background: $not-so-very-dark
-    border-bottom: 2px solid $very-light
+    background: colors.$not-so-very-dark
+    border-bottom: 2px solid colors.$very-light
     display: inline-block
     > *
       vertical-align: middle
     img, svg
       width: 20px
       height: 20px
-      color: $text-color
+      color: colors.$text-color
   .arrow
     opacity: 0
     animation: btn-arrow 1s infinite step-end
   &:hover
     .label
-      background: $very-light
-      color: $very-dark
+      background: colors.$very-light
+      color: colors.$very-dark
       img, svg
-        color: $very-dark
+        color: colors.$very-dark
     .arrow
       opacity: 1
 
@@ -65,7 +63,7 @@
 
 @keyframes btn-arrow
   0%
-    color: $text-color
+    color: colors.$text-color
   50%
     color: transparent
 
@@ -75,10 +73,10 @@
 
 .input
   font-family: 'VictorMono', monospace
-  background: $not-so-very-dark
+  background: colors.$not-so-very-dark
   border: none
-  border-bottom: 1px solid $very-light
-  color: $text-color
+  border-bottom: 1px solid colors.$very-light
+  color: colors.$text-color
   display: block
   width: 100%
   padding: 10px 15px
