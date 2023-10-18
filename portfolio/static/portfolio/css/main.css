@@ -95,6 +95,17 @@ header nav.end {
   margin-bottom: 15px;
 }
 
+.link {
+  color: white;
+}
+
+hr {
+  background-color: hsl(0, 0%, 75%);
+  height: 1px;
+  border: none;
+  margin: 15px 0;
+}
+
 .tag {
   padding: 5px 15px;
   background: hsl(0, 0%, 8%);
@@ -240,6 +251,15 @@ header nav.end {
 .input:hover, .input:focus {
   margin-bottom: 8px;
   border-width: 3px;
+}
+
+.contact-page .contact-submit-button {
+  margin-left: auto;
+  margin-right: 0;
+  display: block;
+}
+.contact-page .email-container {
+  font-size: 20px;
 }
 
 .projects-page {
