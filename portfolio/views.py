@@ -1,9 +1,7 @@
-from django.db.models import F
-from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, Http404, HttpResponseRedirect
-from django.urls import reverse
-from django.views import generic
-from django.utils.translation import gettext
+from django.shortcuts import render, get_object_or_404, redirect
+from django.http import Http404, HttpResponseRedirect, HttpResponse
+from django.conf import settings
+import django.utils.translation as translation
 
 from .models import Project
 
@@ -41,3 +39,18 @@ def project_detail(request, project_id):
             'project': project
         }
     )
+
+
+def set_language(request, lang):
+    new_language = 'en'
+    if lang in settings.LANGUAGES:
+        new_language = lang
+    elif lang == 'switch':
+        if request.LANGUAGE_CODE == 'en':
+            new_language = 'fr'
+        else:
+            new_language = 'en'
+
+    response = redirect('portfolio:index')
+    response.set_cookie(settings.LANGUAGE_COOKIE_NAME, new_language)
+    return response

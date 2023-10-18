@@ -125,6 +125,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'fr'
 
+LANGUAGES = [
+    ('en', 'English'),
+    ('fr', 'Français')
+]
+
+LANGUAGE_COOKIE_NAME = 'enzopb_language'
+
 TIME_ZONE = 'UTC'
 
 USE_I18N = True

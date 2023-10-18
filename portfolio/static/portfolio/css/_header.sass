@@ -1,0 +1,44 @@
+@import 'colors'
+
+header
+  padding: 20px
+  padding-right: 50px
+  display: flex
+  flex-direction: column
+  flex-grow: 0
+  flex-shrink: 0
+  border-right: 1px solid $light
+
+  .site_title, .site_subtitle
+    margin: 0
+    line-height: 1
+
+  .site_title
+    font-size: 50px
+    margin-left: -0.08em // fix pour espace en trop avant le premier caractère
+
+  .site_subtitle
+    font-size: 18px
+
+  nav
+    margin-top: 15px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 20px
+
+    .button .label
+      background: none
+      text-decoration: underline
+      border: none
+      padding: 5px 10px
+      &:hover
+        text-decoration: none
+
+    &.end
+      margin-top: auto
+      margin-bottom: 0
+      flex-direction: row
+      .button .label
+        line-height: 1
+        padding: 10px

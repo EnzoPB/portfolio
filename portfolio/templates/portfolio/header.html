@@ -31,13 +31,21 @@
         </nav>
 
         <nav class="end">
-            <a href="#" class="button">
+            <!--<a href="#" class="button">
                 <span class="arrow">> </span>
                 <span class="label">{% trans 'portfolio nav change language' %}</span>
             </a>
             <a href="#" class="button">
                 <span class="arrow">> </span>
                 <span class="label">{% trans 'portfolio nav switch theme' %}</span>
+            </a>-->
+
+            <a href="{% url 'portfolio:set language' 'switch' %}" class="button">
+                <span class="label">{% component 'svg' src='portfolio/images/language.svg' %}</span>
+            </a>
+
+            <a href="#" class="button">
+                <span class="label">{% component 'svg' src='portfolio/images/theme.svg' %}</span>
             </a>
         </nav>
     </header>
