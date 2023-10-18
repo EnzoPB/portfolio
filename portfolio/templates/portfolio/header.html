@@ -7,37 +7,37 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'portfolio/css/main.css' %}">
-    <title>{% trans "Enzo PB" %}</title>
+    <title>{% trans 'portfolio site title' %}</title>
 </head>
 <body>
 <canvas id="particles"></canvas>
 <main>
     <header>
-        <h1 class="site_title">{% trans "Enzo PB" %}</h1>
-        <h3 class="site_subtitle">{% trans "Engineering student" %}</h3>
+        <h1 class="site_title">{% trans 'portfolio header title' %}</h1>
+        <h3 class="site_subtitle">{% trans 'portfolio header subtitle' %}</h3>
         <nav>
             <a href="{% url 'portfolio:index' %}" hx-get="{% url 'portfolio:index' %}" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="button">
                 <span class="arrow">> </span>
-                <span class="label">{% trans "Home" %}</span>
+                <span class="label">{% trans 'portfolio nav home' %}</span>
             </a>
             <a href="{% url 'portfolio:projects' %}" hx-get="{% url 'portfolio:projects' %}" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="button">
                 <span class="arrow">> </span>
-                <span class="label">{% trans "Projects" %}</span>
+                <span class="label">{% trans 'portfolio nav projects' %}</span>
             </a>
             <a href="{% url 'portfolio:contact' %}" hx-get="{% url 'portfolio:contact' %}" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="button">
                 <span class="arrow">> </span>
-                <span class="label">{% trans "Contact" %}</span>
+                <span class="label">{% trans 'portfolio nav contact' %}</span>
             </a>
         </nav>
 
         <nav class="end">
             <a href="#" class="button">
                 <span class="arrow">> </span>
-                <span class="label">{% trans "Change language" %}</span>
+                <span class="label">{% trans 'portfolio nav change language' %}</span>
             </a>
             <a href="#" class="button">
                 <span class="arrow">> </span>
-                <span class="label">{% trans "Switch theme" %}</span>
+                <span class="label">{% trans 'portfolio nav switch theme' %}</span>
             </a>
         </nav>
     </header>

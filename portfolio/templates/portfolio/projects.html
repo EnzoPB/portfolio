@@ -2,7 +2,7 @@
 {% include 'portfolio/header.html' %}
 
 <div class="content projects-page">
-    <h2>{% trans 'Projects' %}</h2>
+    <h2>{% trans 'portfolio projects title' %}</h2>
     <div class="projects">
         {% for project in project_list %}
         	<a href="{% url 'portfolio:project detail' project.id %}" hx-get="{% url 'portfolio:project detail' project.id %}" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="project">

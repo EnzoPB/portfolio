@@ -2,30 +2,30 @@
 {% include 'portfolio/header.html' %}
 
 <div class="content contact-page">
-    <h2>{% trans 'Contact' %}</h2>
+    <h2>{% trans 'portfolio contact title' %}</h2>
     <form method="post">
-        <label class="input-label" for="name">{% trans 'Your name' %}</label>
+        <label class="input-label" for="name">{% trans 'portfolio contact your name' %}</label>
         <input class="input" type="text" id="name" name="name" maxlength="100" required>
 
-        <label class="input-label" for="email">{% trans 'Your e-mail address' %}</label>
+        <label class="input-label" for="email">{% trans 'portfolio contact your email' %}</label>
         <input class="input" type="email" id="email" name="email" maxlength="100" required>
 
-        <label class="input-label" for="subject">{% trans 'Subject' %}</label>
+        <label class="input-label" for="subject">{% trans 'portfolio contact subject' %}</label>
         <input class="input" type="text" id="subject" name="subject" maxlength="100" required>
 
-        <label class="input-label" for="message">{% trans 'Your message' %}</label>
+        <label class="input-label" for="message">{% trans 'portfolio contact your message' %}</label>
         <textarea class="input" id="message" name="message" maxlength="3000" required></textarea>
 
         <button type="submit" class="button contact-submit-button">
             <span class="arrow">> </span>
             <span class="label">
-                <span>{% trans 'Submit' %}</span>
+                <span>{% trans 'portfolio contact submit' %}</span>
             </span>
         </button>
     </form>
     <hr>
     <div class="email-container">
-        <span>{% trans 'Email address' %}</span>
+        <span>{% trans 'portfolio contact email' %}</span>
         <br>
         <a class="link" href="mailto:enzo@enzopb.me">enzo@enzopb.me</a>
     </div>

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'django.contrib.admin',
     'django.contrib.auth',
+    'translation_manager',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -122,7 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'fr-fr'
+LANGUAGE_CODE = 'fr'
 
 TIME_ZONE = 'UTC'
 
@@ -130,6 +131,15 @@ USE_I18N = True
 
 USE_TZ = True
 
+LOCALE_PATHS = [
+    str(BASE_DIR / 'portfolio/locale')
+]
+
+TRANSLATIONS_BASE_DIR = str(BASE_DIR)
+TRANSLATIONS_PROJECT_BASE_DIR = str(BASE_DIR)
+TRANSLATIONS_CUSTOM_FILTERS = [
+    [r'^portfolio ', 'Portfolio']
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
