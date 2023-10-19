@@ -3,6 +3,8 @@ from django.http import Http404, HttpResponseRedirect, HttpResponse
 from django.conf import settings
 import django.utils.translation as translation
 
+import requests
+
 from .models import Project
 from.forms import ContactForm
 
@@ -29,6 +31,14 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+            requests.post(settings.DISCORD_WEBHOOK_URL, {
+                'content': f'{subject}\n{name} {email}\n\n{message}',
+                'username': name,
+            })
             return render(
                 request,
                 'portfolio/contact_sent.html'

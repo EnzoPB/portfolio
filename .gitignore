@@ -6,3 +6,4 @@ media/uploads/*
 portfolio/static/portfolio/css/.sass-cache
 portfolio/migrations
 db.sqlite3
+.env
