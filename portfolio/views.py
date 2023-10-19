@@ -4,6 +4,7 @@ from django.conf import settings
 import django.utils.translation as translation
 
 from .models import Project
+from.forms import ContactForm
 
 
 def index(request):
@@ -24,10 +25,23 @@ def projects(request):
 
 
 def contact(request):
+    form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            return render(
+                request,
+                'portfolio/contact_sent.html'
+            )
+
     return render(
         request,
-        'portfolio/contact.html'
+        'portfolio/contact.html',
+        {
+            'form': form
+        }
     )
+
 
 
 def project_detail(request, project_id):

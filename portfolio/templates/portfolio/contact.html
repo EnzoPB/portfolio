@@ -4,17 +4,25 @@
 <div class="content contact-page">
     <h2>{% trans 'portfolio contact title' %}</h2>
     <form method="post">
-        <label class="input-label" for="name">{% trans 'portfolio contact your name' %}</label>
-        <input class="input" type="text" id="name" name="name" maxlength="100" required>
+        {{ form.non_field_errors }}
 
-        <label class="input-label" for="email">{% trans 'portfolio contact your email' %}</label>
-        <input class="input" type="email" id="email" name="email" maxlength="100" required>
+        {% csrf_token %}
 
-        <label class="input-label" for="subject">{% trans 'portfolio contact subject' %}</label>
-        <input class="input" type="text" id="subject" name="subject" maxlength="100" required>
+        <label for="{{ form.name.id_for_label }}">{% trans 'portfolio contact your name' %}</label>
+        {{ form.name.errors }}
+        {{ form.name }}
 
-        <label class="input-label" for="message">{% trans 'portfolio contact your message' %}</label>
-        <textarea class="input" id="message" name="message" maxlength="3000" required></textarea>
+        <label for="{{ form.email.id_for_label }}">{% trans 'portfolio contact your email' %}</label>
+        {{ form.email.errors }}
+        {{ form.email }}
+
+        <label for="{{ form.subject.id_for_label }}">{% trans 'portfolio contact subject' %}</label>
+        {{ form.subject.errors }}
+        {{ form.subject }}
+
+        <label for="{{ form.message.id_for_label }}">{% trans 'portfolio contact your message' %}</label>
+        {{ form.message.errors }}
+        {{ form.message }}
 
         <button type="submit" class="button contact-submit-button">
             <span class="arrow">> </span>

@@ -190,12 +190,12 @@ hr {
     color: transparent;
   }
 }
-.input-label {
+label {
   display: block;
   text-align: left;
 }
 
-.input {
+input, textarea {
   font-family: "VictorMono", monospace;
   background: hsl(0, 0%, 92%);
   border: none;
@@ -207,9 +207,17 @@ hr {
   outline: none;
   margin-bottom: 10px;
 }
-.input:hover, .input:focus {
+input:hover, input:focus, textarea:hover, textarea:focus {
   margin-bottom: 8px;
   border-width: 3px;
+}
+
+.errorlist {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  color: #e74c3c;
+  margin: 7px 0;
 }
 
 header {
