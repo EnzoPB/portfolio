@@ -59,7 +59,7 @@ def set_theme(request, theme):
     new_theme = 'dark'
     if theme in settings.THEMES:
         new_theme = theme
-    elif theme == 'switch':
+    elif theme == 'switch' and 'theme' in request.COOKIES.keys():
         if request.COOKIES['theme'] == 'dark':
             new_theme = 'light'
         else:
