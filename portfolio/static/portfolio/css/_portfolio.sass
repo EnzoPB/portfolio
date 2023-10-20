@@ -25,11 +25,18 @@ main, #particles
   bottom: 30px
   left: 30px
   right: 30px
+  @media (max-width: screen.$breakpoint-medium)
+    top: 20px
+    bottom: 20px
+    left: 20px
+    right: 20px
 
 main
   display: flex
   border: 1px solid colors.$light
   outline: 30px solid colors.$very-dark
+  @media (max-width: screen.$breakpoint-medium)
+    flex-direction: column
 
 @keyframes particles-fadein
   from
@@ -81,6 +88,8 @@ hr
   width: 100%
   padding: 20px
   display: flex
+  @media (max-width: screen.$breakpoint-medium)
+    overflow-y: auto
   &.htmx-swapping
     animation: fade-out 0.3s
   &.htmx-settling
@@ -90,3 +99,5 @@ hr
     margin: 0 auto
     align-self: center
     text-align: center
+    @media (max-width: screen.$breakpoint-medium)
+      width: 90%

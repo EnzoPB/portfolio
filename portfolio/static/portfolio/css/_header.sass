@@ -7,6 +7,12 @@ header
   flex-shrink: 0
   border-right: 1px solid colors.$light
 
+  @media (max-width: screen.$breakpoint-medium)
+    border-right: none
+    border-bottom: 1px solid colors.$light
+    padding: 15px
+
+
   .site_title, .site_subtitle
     margin: 0
     line-height: 1
@@ -24,6 +30,14 @@ header
     flex-direction: column
     align-items: flex-start
     gap: 20px
+
+    @media (max-width: screen.$breakpoint-medium)
+      flex-direction: row
+      justify-content: center
+
+    .button .arrow
+      @media (max-width: screen.$breakpoint-medium)
+        display: none
 
     .button .label
       background: none

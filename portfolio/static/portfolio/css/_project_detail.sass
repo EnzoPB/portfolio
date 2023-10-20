@@ -3,8 +3,13 @@
   align-self: normal!important
   overflow-y: auto
 
+  @media (max-width: screen.$breakpoint-medium)
+    width: 90%!important
+
   .project-image
     max-width: 70%
+    @media (max-width: screen.$breakpoint-medium)
+      max-width: 100%
 
 .project-full-description
   text-align: justify
