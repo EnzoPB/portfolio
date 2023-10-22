@@ -2,7 +2,7 @@
 .vscode/
 .idea/
 venv/
-media/uploads/*
+media/*
 portfolio/static/portfolio/css/.sass-cache
 portfolio/migrations
 db.sqlite3

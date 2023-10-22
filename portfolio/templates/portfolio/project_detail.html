@@ -12,7 +12,7 @@
         {% for skill in project.skills.all %}
         <span class="tag">
             <span>{{ skill.name }}</span>
-            {% component 'svg' src='portfolio/images/'|add:skill.icon|add:'.svg' %}</span>
+            {% component 'svg' src=skill.icon %}</span>
         {% endfor %}
     </div>
     <h3>{% trans 'portfolio project detail links' %}</h3>
@@ -22,7 +22,7 @@
             <span class="arrow">> </span>
             <span class="label">
                 <span>{{ link.label }}</span>
-                {% component 'svg' src='portfolio/images/'|add:link.icon|add:'.svg' %}
+                {% component 'svg' src=link.icon %}
             </span>
         </a>
         {% endfor %}
