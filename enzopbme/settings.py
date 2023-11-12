@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'django.contrib.admin',
     'django.contrib.auth',
-    'translation_manager',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
