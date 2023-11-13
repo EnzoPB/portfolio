@@ -7,7 +7,7 @@
     <p class="project-full-description">
         {{ project.description }}
     </p>
-    <h3>{% trans 'portfolio project detail used techs' %}</h3>
+    <h3>{% trans 'Used technologies & tools' %}</h3>
     <div class="project-techs">
         {% for skill in project.skills.all %}
         <span class="tag">
@@ -15,7 +15,7 @@
             {% component 'svg' src=skill.icon %}</span>
         {% endfor %}
     </div>
-    <h3>{% trans 'portfolio project detail links' %}</h3>
+    <h3>{% trans 'Links' %}</h3>
     <div class="project-links">
         {% for link in project.projectlink_set.all %}
         <a href="{{ link.url }}" target="_blank" class="button">

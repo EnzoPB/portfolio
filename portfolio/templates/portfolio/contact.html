@@ -2,38 +2,38 @@
 {% include 'portfolio/header.html' %}
 
 <div class="content contact-page">
-    <h2>{% trans 'portfolio contact title' %}</h2>
+    <h2>{% trans 'Contact' %}</h2>
     <form method="post">
         {{ form.non_field_errors }}
 
         {% csrf_token %}
 
-        <label for="{{ form.name.id_for_label }}">{% trans 'portfolio contact your name' %}</label>
+        <label for="{{ form.name.id_for_label }}">{% trans 'Your name' %}</label>
         {{ form.name.errors }}
         {{ form.name }}
 
-        <label for="{{ form.email.id_for_label }}">{% trans 'portfolio contact your email' %}</label>
+        <label for="{{ form.email.id_for_label }}">{% trans 'Your e-mail address' %}</label>
         {{ form.email.errors }}
         {{ form.email }}
 
-        <label for="{{ form.subject.id_for_label }}">{% trans 'portfolio contact subject' %}</label>
+        <label for="{{ form.subject.id_for_label }}">{% trans 'Message subject' %}</label>
         {{ form.subject.errors }}
         {{ form.subject }}
 
-        <label for="{{ form.message.id_for_label }}">{% trans 'portfolio contact your message' %}</label>
+        <label for="{{ form.message.id_for_label }}">{% trans 'Message' %}</label>
         {{ form.message.errors }}
         {{ form.message }}
 
         <button type="submit" class="button contact-submit-button">
             <span class="arrow">> </span>
             <span class="label">
-                <span>{% trans 'portfolio contact submit' %}</span>
+                <span>{% trans 'Submit' %}</span>
             </span>
         </button>
     </form>
     <hr>
     <div class="email-container">
-        <span>{% trans 'portfolio contact email' %}</span>
+        <span>{% trans 'E-mail address' %}</span>
         <br>
         <a class="link" href="mailto:enzo@enzopb.me">enzo@enzopb.me</a>
     </div>

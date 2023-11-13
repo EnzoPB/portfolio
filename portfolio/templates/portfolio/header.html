@@ -11,44 +11,35 @@
     {% else %}
     <link rel="stylesheet" id="theme-css" href="{% static 'portfolio/css/main-light.css' %}">
     {% endif %}
-    <title>{% trans 'portfolio site title' %}</title>
+    <title>{% trans 'Enzo PB' %}</title>
 </head>
 <body>
 <canvas id="particles"></canvas>
 <main>
     <header>
-        <h1 class="site_title">{% trans 'portfolio header title' %}</h1>
-        <h3 class="site_subtitle">{% trans 'portfolio header subtitle' %}</h3>
+        <h1 class="site_title">{% trans 'Enzo PB' %}</h1>
+        <h3 class="site_subtitle">{% trans 'Student engineer' %}</h3>
         <nav>
             <a href="{% url 'portfolio:index' %}" hx-get="{% url 'portfolio:index' %}" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="button">
                 <span class="arrow">> </span>
-                <span class="label">{% trans 'portfolio nav home' %}</span>
+                <span class="label">{% trans 'Home' %}</span>
             </a>
             <a href="{% url 'portfolio:projects' %}" hx-get="{% url 'portfolio:projects' %}" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="button">
                 <span class="arrow">> </span>
-                <span class="label">{% trans 'portfolio nav projects' %}</span>
+                <span class="label">{% trans 'Projects' %}</span>
             </a>
             <a href="{% url 'portfolio:contact' %}" hx-get="{% url 'portfolio:contact' %}" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="button">
                 <span class="arrow">> </span>
-                <span class="label">{% trans 'portfolio nav contact' %}</span>
+                <span class="label">{% trans 'Contact' %}</span>
             </a>
         </nav>
 
         <nav class="end">
-            <!--<a href="#" class="button">
-                <span class="arrow">> </span>
-                <span class="label">{% trans 'portfolio nav change language' %}</span>
-            </a>
-            <a href="#" class="button">
-                <span class="arrow">> </span>
-                <span class="label">{% trans 'portfolio nav switch theme' %}</span>
-            </a>-->
-
-            <a href="{% url 'portfolio:set language' 'switch' %}" class="button">
+            <a href="{% url 'portfolio:set language' 'switch' %}" title="{% trans 'Switch language' %}" class="button">
                 <span class="label">{% component 'svg' src='portfolio/images/language.svg' %}</span>
             </a>
 
-            <a href="{% url 'portfolio:set theme' 'switch' %}" class="button">
+            <a href="{% url 'portfolio:set theme' 'switch' %}" title="{% trans 'Switch theme' %}" class="button">
                 <span class="label">{% component 'svg' src='portfolio/images/theme.svg' %}</span>
             </a>
         </nav>
