@@ -14,5 +14,6 @@ class ProjectAdmin(admin.ModelAdmin):
     list_display = ['title', 'short_description']
     search_fields = ['title', 'description']
     filter_horizontal = ['skills']
+    exclude = ['description', 'short_description']
 
 admin.site.register(ProjectSkill)

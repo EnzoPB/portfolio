@@ -138,11 +138,7 @@ LOCALE_PATHS = [
     str(BASE_DIR / 'portfolio/locale')
 ]
 
-TRANSLATIONS_BASE_DIR = str(BASE_DIR)
-TRANSLATIONS_PROJECT_BASE_DIR = str(BASE_DIR)
-TRANSLATIONS_CUSTOM_FILTERS = [
-    [r'^portfolio ', 'Portfolio']
-]
+MODELTRANSLATION_DEBUG = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
