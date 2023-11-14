@@ -150,9 +150,6 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = BASE_DIR / 'static/'
 
-MEDIA_ROOT = BASE_DIR / 'media/'
-MEDIA_URL = 'media/'
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -169,3 +166,15 @@ THEMES = [
 ]
 
 DISCORD_WEBHOOK_URL = env('DISCORD_WEBHOOK_URL')
+
+# S3 bucket settings
+
+AWS_ACCESS_KEY_ID = env('S3_ACCESS_KEY')
+AWS_SECRET_ACCESS_KEY = env('S3_SECRET')
+AWS_STORAGE_BUCKET_NAME = env('S3_BUCKET_NAME')
+AWS_QUERYSTRING_AUTH = False
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = 'public-read'
+AWS_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
