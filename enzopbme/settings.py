@@ -11,24 +11,23 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import environ
-import dj_database_url
+import dotenv
+import os
+
+dotenv.load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-env = environ.Env()
-environ.Env.read_env(str(BASE_DIR / '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = os.environ['SECRET_KEY']
 
 ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
 CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
-DEBUG = False
+DEBUG = True
 
 
 # Application definition
@@ -170,13 +169,13 @@ THEMES = [
     'light'
 ]
 
-DISCORD_WEBHOOK_URL = env('DISCORD_WEBHOOK_URL')
+DISCORD_WEBHOOK_URL = os.environ['DISCORD_WEBHOOK_URL']
 
 # S3 bucket settings
 
-AWS_ACCESS_KEY_ID = env('S3_ACCESS_KEY')
-AWS_SECRET_ACCESS_KEY = env('S3_SECRET')
-AWS_STORAGE_BUCKET_NAME = env('S3_BUCKET_NAME')
+AWS_ACCESS_KEY_ID = os.environ['S3_ACCESS_KEY']
+AWS_SECRET_ACCESS_KEY = os.environ['S3_SECRET']
+AWS_STORAGE_BUCKET_NAME = os.environ['S3_BUCKET_NAME']
 AWS_QUERYSTRING_AUTH = False
 
 AWS_S3_FILE_OVERWRITE = False

@@ -6,3 +6,4 @@ media/*
 portfolio/static/portfolio/css/.sass-cache
 db.sqlite3
 .env
+.azure
