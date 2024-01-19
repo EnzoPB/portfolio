@@ -1,12 +1,15 @@
 class Particles {
     constructor(canvas) {
         this.maxSpeed = 5;
-        this.minRadius = 120;
+        this.minRadius = 80;
         this.maxRadius = 200;
 
         this.canvas = canvas;
         this.ctx = this.canvas.getContext('2d');
-        this.radius = Math.floor(Math.random() * this.maxRadius) + this.minRadius;
+        this.radius_x = Math.floor(Math.random() * this.maxRadius) + this.minRadius;
+        this.radius_y = Math.floor(Math.random() * this.maxRadius) + this.minRadius;
+
+        this.rotation = 0
 
         this.x = Math.floor(Math.random() * canvas.width);
         this.y = Math.floor(Math.random() * canvas.height);
@@ -20,6 +23,8 @@ class Particles {
         // change the speed
         this.speedX += Math.floor(Math.random() * 3) - 1;
         this.speedY += Math.floor(Math.random() * 3) - 1;
+
+        this.rotation = (Date.now()/5000)%180;
 
         if (this.speedX > this.maxSpeed) {
             this.speedX = this.maxSpeed;
@@ -57,7 +62,7 @@ class Particles {
         }
 
         this.ctx.beginPath();
-        this.ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        this.ctx.ellipse(this.x, this.y, this.radius_x, this.radius_y, this.rotation, 0, Math.PI * 2);
         this.ctx.fill();
     }
 }
@@ -70,7 +75,7 @@ function init() {
     ctx = canvas.getContext('2d');
     resetSize();
     window.requestAnimationFrame(draw);
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 8; i++) {
         particles.push(new Particles(canvas));
     }
 }

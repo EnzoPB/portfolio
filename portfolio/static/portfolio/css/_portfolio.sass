@@ -15,7 +15,7 @@ html, body
 
 body
   font-family: 'VictorMono', monospace
-  background: colors.$very-dark
+  background: colors.$dark-4
   color: colors.$text-color
   overflow: hidden
 
@@ -33,8 +33,8 @@ main, #particles
 
 main
   display: flex
-  border: 1px solid colors.$light
-  outline: 30px solid colors.$very-dark
+  border: 1px solid colors.$light-1
+  outline: 30px solid colors.$dark-4
   @media (max-width: screen.$breakpoint-medium)
     flex-direction: column
 
@@ -46,25 +46,32 @@ main
 
 #particles
   transform: scale(1.4)
-  filter: blur(100px)
+  filter: blur(80px)
   animation: particles-fadein 4s
   width: 100%
   height: 100%
-  color: colors.$dark
+  color: colors.$dark-2
+
+#particles-noise
+  background: url(../images/noise.webp)
+  background-size: 100px
+  mix-blend-mode: overlay
+  width: 100%
+  height: 100vh
 
 .link
   color: colors.$text-color
 
 hr
-  background-color: colors.$light
+  background-color: colors.$light-1
   height: 1px
   border: none
   margin: 15px 0
 
 .tag
     padding: 5px 15px
-    background: colors.$not-so-very-dark
-    border-bottom: 2px solid colors.$very-light
+    background: colors.$dark-3
+    border-bottom: 2px solid colors.$light-2
     > *
       vertical-align: middle
     img, svg
