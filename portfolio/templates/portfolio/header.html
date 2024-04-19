@@ -37,11 +37,11 @@
 
         <nav class="end">
             <a href="{% url 'portfolio:set language' 'switch' %}" title="{% trans 'Switch language' %}" class="button">
-                <span class="label">{% component 'svg' src='portfolio/images/language.svg' %}</span>
+                <span class="label">{% component 'svg' src='portfolio/images/language.svg' %}{% endcomponent %}</span>
             </a>
 
             <a href="{% url 'portfolio:set theme' 'switch' %}" title="{% trans 'Switch theme' %}" class="button">
-                <span class="label">{% component 'svg' src='portfolio/images/theme.svg' %}</span>
+                <span class="label">{% component 'svg' src='portfolio/images/theme.svg' %}{% endcomponent %}</span>
             </a>
         </nav>
     </header>

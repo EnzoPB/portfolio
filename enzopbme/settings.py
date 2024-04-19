@@ -30,6 +30,7 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+CSRF_TRUSTED_ORIGINS = ['https://'+host for host in ALLOWED_HOSTS]
 
 
 # Application definition
@@ -145,7 +146,7 @@ MODELTRANSLATION_DEBUG = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'components/'
+    BASE_DIR / 'portfolio/components/'
 ]
 
 STATIC_ROOT = BASE_DIR / 'static/'
