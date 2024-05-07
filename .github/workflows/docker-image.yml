@@ -1,9 +1,9 @@
 name: Docker Image CI
 
 on:
-  workflow_run:
-    workflows: ["Main release"]
-    types: [completed]
+  push:
+    tags:
+    - '*'
 
 jobs:
 
