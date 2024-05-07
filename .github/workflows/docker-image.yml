@@ -18,7 +18,8 @@ jobs:
           registry: ghcr.io
           username: ${{github.actor}}
           password: ${{secrets.GITHUB_TOKEN}}
-      
+          
+      - uses: actions/checkout@v4
       - name: 'Build & Push image'
         run: |
           docker build . --tag ghcr.io/enzopb/portfolio:${{ github.ref_name }}
