@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-23 17:37+0000\n"
+"POT-Creation-Date: 2024-05-13 22:24+0000\n"
 "PO-Revision-Date: 2023-11-13 22:51+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: portfolio/templates/portfolio/contact.html:5
 #: portfolio/templates/portfolio/contact_sent.html:5
-#: portfolio/templates/portfolio/header.html:34
+#: portfolio/templates/portfolio/header.html:38
 msgid "Contact"
 msgstr "Contact"
 
@@ -75,11 +75,15 @@ msgstr "Accueil"
 msgid "Projects"
 msgstr "Projets"
 
-#: portfolio/templates/portfolio/header.html:39
+#: portfolio/templates/portfolio/header.html:34
+msgid "Skills"
+msgstr "Compétences"
+
+#: portfolio/templates/portfolio/header.html:43
 msgid "Switch language"
 msgstr "Changer la langue"
 
-#: portfolio/templates/portfolio/header.html:43
+#: portfolio/templates/portfolio/header.html:47
 msgid "Switch theme"
 msgstr "Changer le thème"
 
@@ -87,36 +91,40 @@ msgstr "Changer le thème"
 #, python-format
 msgid ""
 "\n"
-"        Hi, I'm Enzo, a 20-year-old developer. I've been passionate about IT "
+"        Hi, I'm Enzo, a 21-year-old developer. I've been passionate about IT "
 "since I was a kid, and I love learning new skills and tools thanks to the <a "
 "href=\"%(projects_url)s\" hx-get=\"%(projects_url)s\" hx-target=\"#main\" hx-"
 "select=\"#main\" hx-swap=\"outerHTML swap:0.3s settle:0.3s\" hx-push-"
 "url=\"true\" class=\"link\">projects</a> I've made.\n"
 "        <br>\n"
-"        I'm a second-year student in a computer engineering preparatory "
-"class at CESI in Bordeaux, and I'm looking for an internship in development "
-"starting in april 2024, and an apprentice ship for next year.\n"
+"            I'm a second-year student in a computer engineering preparatory "
+"class at CESI in Bordeaux, and <span style=\"text-decoration:underline\">I "
+"am currently looking for an apprentice ship in aero.</span>\n"
 "        "
 msgstr ""
 "\n"
-"Bonjour, je suis Enzo, jeune développeur de 20 ans. Depuis petit passionné "
-"par l'informatique, j'aime apprendre de nouvelles compétences et outils "
-"grâce aux <a href=\"%(projects_url)s\" hx-get=\"%(projects_url)s\" hx-"
+"Bonjour, je suis Enzo, développeur de 21 ans. Depuis petit passionné par "
+"l'informatique, j'aime apprendre de nouvelles compétences et outils grâce "
+"aux <a href=\"%(projects_url)s\" hx-get=\"%(projects_url)s\" hx-"
 "target=\"#main\" hx-select=\"#main\" hx-swap=\"outerHTML swap:0.3s "
 "settle:0.3s\" hx-push-url=\"true\" class=\"link\">projets</a> que j'ai "
 "réalisés.\n"
 "<br>\n"
 "Étudiant en deuxième année de classe préparatoire ingénieure informatique au "
-"CESI de Bordeaux, Je suis à la recherche d'un stage "
-"dans le développement à partir d'avril 2024, et d'une alternance pour l'année prochaine."
+"CESI de Bordeaux, <span style=\"text-decoration:underline\">je suis à la recherche d'une alternance pour l'année "
+"prochaine dans le domaine de l'aero.</span>"
 
 #: portfolio/templates/portfolio/project_detail.html:10
 msgid "Used technologies & tools"
 msgstr "Technologies et outils utilisés"
 
-#: portfolio/templates/portfolio/project_detail.html:18
+#: portfolio/templates/portfolio/project_detail.html:19
 msgid "Links"
 msgstr "Liens"
+
+#: portfolio/templates/portfolio/skills.html:5
+msgid "My skills"
+msgstr "Mes compétences"
 
 #, fuzzy
 #~| msgid "Message"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-23 17:18+0000\n"
+"POT-Creation-Date: 2024-05-13 22:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: portfolio/templates/portfolio/contact.html:5
 #: portfolio/templates/portfolio/contact_sent.html:5
-#: portfolio/templates/portfolio/header.html:34
+#: portfolio/templates/portfolio/header.html:38
 msgid "Contact"
 msgstr ""
 
@@ -72,11 +72,15 @@ msgstr ""
 msgid "Projects"
 msgstr ""
 
-#: portfolio/templates/portfolio/header.html:39
-msgid "Switch language"
+#: portfolio/templates/portfolio/header.html:34
+msgid "Skills"
 msgstr ""
 
 #: portfolio/templates/portfolio/header.html:43
+msgid "Switch language"
+msgstr ""
+
+#: portfolio/templates/portfolio/header.html:47
 msgid "Switch theme"
 msgstr ""
 
@@ -84,15 +88,15 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"        Hi, I'm Enzo, a 20-year-old developer. I've been passionate about IT "
+"        Hi, I'm Enzo, a 21-year-old developer. I've been passionate about IT "
 "since I was a kid, and I love learning new skills and tools thanks to the <a "
 "href=\"%(projects_url)s\" hx-get=\"%(projects_url)s\" hx-target=\"#main\" hx-"
 "select=\"#main\" hx-swap=\"outerHTML swap:0.3s settle:0.3s\" hx-push-"
 "url=\"true\" class=\"link\">projects</a> I've made.\n"
 "        <br>\n"
-"        I'm a second-year student in a computer engineering preparatory "
-"class at CESI in Bordeaux, and I'm looking for an internship in development "
-"starting in april 2024, and an apprentice ship for next year.\n"
+"            I'm a second-year student in a computer engineering preparatory "
+"class at CESI in Bordeaux, and <span style=\"text-decoration:underline\">I "
+"am currently looking for an apprentice ship in aero.</span>\n"
 "        "
 msgstr ""
 
@@ -100,6 +104,10 @@ msgstr ""
 msgid "Used technologies & tools"
 msgstr ""
 
-#: portfolio/templates/portfolio/project_detail.html:18
+#: portfolio/templates/portfolio/project_detail.html:19
 msgid "Links"
+msgstr ""
+
+#: portfolio/templates/portfolio/skills.html:5
+msgid "My skills"
 msgstr ""
