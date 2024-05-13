@@ -16,4 +16,10 @@ class ProjectAdmin(admin.ModelAdmin):
     filter_horizontal = ['skills']
     exclude = ['description', 'short_description']
 
-admin.site.register(ProjectSkill)
+@admin.register(Skill)
+class SkillAdmin(admin.ModelAdmin):
+    exclude = ['detail']
+
+@admin.register(SkillCategory)
+class SkillCategoryAdmin(admin.ModelAdmin):
+    exclude = ['name']

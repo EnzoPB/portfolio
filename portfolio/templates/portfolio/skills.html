@@ -1,0 +1,23 @@
+{% load i18n static %}
+{% include 'portfolio/header.html' %}
+
+<div class="content skills-page">
+    <h2>{% trans 'My skills' %}</h2>
+    <div class="categories">
+        {% for category in categories %}
+            <h3>{{ category.name }}</h3>
+            <div class="skills">
+                {% for skill in skills_list %}
+                    {% if skill.category == category %}
+                    <span class="tag skill" title="{{ skill.detail }}">
+                        <span>{{ skill.name }}</span>
+                        {% component 'svg' src=skill.icon %}{% endcomponent %}
+                    </span>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% include 'portfolio/footer.html' %}

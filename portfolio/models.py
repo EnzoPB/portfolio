@@ -7,9 +7,21 @@ def random_filename(instance, filename):
     return f'{uuid4()}.{ext}'
 
 
-class ProjectSkill(models.Model):
+class SkillCategory(models.Model):
     name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Skill category'
+        verbose_name_plural = 'Skill categories'
+
+class Skill(models.Model):
+    name = models.CharField(max_length=50)
+    detail = models.CharField(max_length=100)
     icon = models.FileField(upload_to=random_filename)
+    category = models.ForeignKey(SkillCategory, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.name
@@ -23,7 +35,7 @@ class Project(models.Model):
     short_description = models.CharField('short description', max_length=200)
     description = models.TextField()
     image = models.ImageField(upload_to=random_filename)
-    skills = models.ManyToManyField(ProjectSkill)
+    skills = models.ManyToManyField(Skill)
 
     def __str__(self):
         return self.title

@@ -2,6 +2,7 @@
 .vscode/
 .idea/
 venv/
+.venv/
 media/*
 portfolio/static/portfolio/css/.sass-cache
 db.sqlite3

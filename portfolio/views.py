@@ -5,8 +5,8 @@ import django.utils.translation as translation
 
 import requests
 
-from .models import Project
-from.forms import ContactForm
+from .models import Project, Skill, SkillCategory
+from .forms import ContactForm
 
 
 def index(request):
@@ -61,6 +61,17 @@ def project_detail(request, project_id):
         'portfolio/project_detail.html',
         {
             'project': project
+        }
+    )
+
+
+def skills(request):
+    return render(
+        request,
+        'portfolio/skills.html',
+        {
+            'categories': SkillCategory.objects.all(),
+            'skills_list': Skill.objects.all()
         }
     )
 

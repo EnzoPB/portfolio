@@ -386,6 +386,22 @@ header nav.end .button .label {
   margin: 0;
 }
 
+.skills-page {
+  align-self: normal !important;
+  width: 90%;
+}
+.skills-page .categories h3 {
+  text-align: left;
+  margin-bottom: 5px;
+}
+.skills-page .categories .skills {
+  text-align: left;
+}
+.skills-page .categories .skills .skill {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
 .project-detail-page {
   width: 80% !important;
   align-self: normal !important;

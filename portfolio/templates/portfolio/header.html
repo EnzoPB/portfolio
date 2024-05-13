@@ -29,6 +29,10 @@
                 <span class="arrow">> </span>
                 <span class="label">{% trans 'Projects' %}</span>
             </a>
+            <a href="{% url 'portfolio:skills' %}" hx-get="{% url 'portfolio:skills' %}" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="button">
+                <span class="arrow">> </span>
+                <span class="label">{% trans 'Skills' %}</span>
+            </a>
             <a href="{% url 'portfolio:contact' %}" hx-get="{% url 'portfolio:contact' %}" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true" class="button">
                 <span class="arrow">> </span>
                 <span class="label">{% trans 'Contact' %}</span>

@@ -8,6 +8,7 @@ app_name = 'portfolio'
 urlpatterns = [
     path('', views.index, name='index'),
     path('projects', views.projects, name='projects'),
+    path('skills', views.skills, name='skills'),
     path('contact', views.contact, name='contact'),
     path('project/<int:project_id>', views.project_detail, name='project detail'),
     path('set_language/<str:lang>', views.set_language, name='set language'),
