@@ -8,13 +8,20 @@
             <h3>{{ category.name }}</h3>
             <div class="skills">
                 {% for skill in category.skills.all %}
-                    <span class="tag skill tooltip-activator" title="{{ skill.detail }}">
+                    <span class="tag skill tooltip-activator">
                         <span>{{ skill.name }}</span>
                         {% component 'svg' src=skill.icon %}{% endcomponent %}
                         <div class="tooltip">
-                            {{ skill.detail }}
+                            {% if skill.detail %}
+                                {{ skill.detail|safe }}
+                            {% endif %}
+                        
+                            {% if skill.detail and skill.projects.all %}
+                                <br>
+                            {% endif %}
+                        
                             {% if skill.projects.all %}
-                                <br>{% trans 'Used in' %}:<br>
+                                {% trans 'Used in' %}:<br>
                                 {% for project in skill.projects.all %}
                                     - <a class="link" href="{% url 'portfolio:project detail' project.id %}" hx-get="{% url 'portfolio:project detail' project.id %}" hx-target="#main" hx-select="#main" hx-swap="outerHTML swap:0.3s settle:0.3s" hx-push-url="true">
                                         {{ project.title }}

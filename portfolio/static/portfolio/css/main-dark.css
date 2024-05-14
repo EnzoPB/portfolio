@@ -444,6 +444,9 @@ header nav.end .button .label {
   text-align: justify;
 }
 
+.project-techs .tag {
+  display: inline-block;
+}
 .project-techs > .tag:not(:first-child) {
   margin-left: 10px;
 }
