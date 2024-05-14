@@ -15,7 +15,17 @@ Create a .env file with the following values:
 - [`ALLOWED_HOSTS`](https://docs.djangoproject.com/en/4.2/ref/settings/#allowed-hosts)
 - `DISCORD_WEBHOOK_URL`: A Discord webhook to send the messages sent from the contact form
 - [`SECRET_KEY`](https://docs.djangoproject.com/en/4.2/ref/settings/#secret-key)
-- `DATABASE_URL`: Postgres url to connect to the database (format postgres://username:password@host:port/database)
+- MySQL credentials:
+  - DATABASE_DB
+  - DATABASE_USERNAME
+  - DATABASE_PASSWORD
+  - DATABASE_HOST
+  - DATABASE_PORT
+- AWS S3 credentials:
+  - S3_ACCESS_KEY
+  - S3_SECRET
+  - S3_BUCKET_NAME
+
 
 Create the database:
 ```bash
