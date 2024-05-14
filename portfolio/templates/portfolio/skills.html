@@ -7,13 +7,11 @@
         {% for category in categories %}
             <h3>{{ category.name }}</h3>
             <div class="skills">
-                {% for skill in skills_list %}
-                    {% if skill.category == category %}
                     <span class="tag skill" title="{{ skill.detail }}">
+                {% for skill in category.skills.all %}
                         <span>{{ skill.name }}</span>
                         {% component 'svg' src=skill.icon %}{% endcomponent %}
                     </span>
-                    {% endif %}
                 {% endfor %}
             </div>
         {% endfor %}

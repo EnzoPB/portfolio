@@ -70,8 +70,7 @@ def skills(request):
         request,
         'portfolio/skills.html',
         {
-            'categories': SkillCategory.objects.all(),
-            'skills_list': Skill.objects.all()
+            'categories': SkillCategory.objects.all()
         }
     )
 
