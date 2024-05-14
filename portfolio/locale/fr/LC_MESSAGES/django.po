@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-13 22:24+0000\n"
+"POT-Creation-Date: 2024-05-14 10:14+0000\n"
 "PO-Revision-Date: 2023-11-13 22:51+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@>\n"
@@ -111,8 +111,9 @@ msgstr ""
 "réalisés.\n"
 "<br>\n"
 "Étudiant en deuxième année de classe préparatoire ingénieure informatique au "
-"CESI de Bordeaux, <span style=\"text-decoration:underline\">je suis à la recherche d'une alternance pour l'année "
-"prochaine dans le domaine de l'aero.</span>"
+"CESI de Bordeaux, <span style=\"text-decoration:underline\">je suis à la "
+"recherche d'une alternance pour l'année prochaine dans le domaine de l'aero."
+"</span>"
 
 #: portfolio/templates/portfolio/project_detail.html:10
 msgid "Used technologies & tools"
@@ -125,6 +126,10 @@ msgstr "Liens"
 #: portfolio/templates/portfolio/skills.html:5
 msgid "My skills"
 msgstr "Mes compétences"
+
+#: portfolio/templates/portfolio/skills.html:17
+msgid "Used in"
+msgstr "Utilisé dans"
 
 #, fuzzy
 #~| msgid "Message"

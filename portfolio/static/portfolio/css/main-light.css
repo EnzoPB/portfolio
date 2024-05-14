@@ -251,6 +251,25 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   margin: 7px 0;
 }
 
+.tooltip-activator:hover {
+  position: relative;
+}
+.tooltip-activator:hover .tooltip {
+  display: inline-block;
+}
+
+.tooltip {
+  background: hsl(0, 0%, 92%);
+  padding: 7px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 100%;
+  margin-bottom: 3px;
+  display: none;
+  width: max-content;
+}
+
 header {
   padding: 20px;
   padding-right: 50px;
