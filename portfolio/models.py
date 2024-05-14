@@ -19,7 +19,7 @@ class SkillCategory(models.Model):
 
 class Skill(models.Model):
     name = models.CharField(max_length=50)
-    detail = models.CharField(max_length=100)
+    detail = models.TextField()
     icon = models.FileField(upload_to=random_filename)
     category = models.ForeignKey(SkillCategory, on_delete=models.CASCADE, null=True, related_name='skills')
 
