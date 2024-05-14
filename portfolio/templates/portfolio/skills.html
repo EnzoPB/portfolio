@@ -11,15 +11,15 @@
                     <span class="tag skill tooltip-activator">
                         <span>{{ skill.name }}</span>
                         {% component 'svg' src=skill.icon %}{% endcomponent %}
-                        <div class="tooltip">
+                        <div class="tooltip bottom">
                             {% if skill.detail %}
                                 {{ skill.detail|safe }}
                             {% endif %}
-                        
+
                             {% if skill.detail and skill.projects.all %}
                                 <br>
                             {% endif %}
-                        
+
                             {% if skill.projects.all %}
                                 {% trans 'Used in' %}:<br>
                                 {% for project in skill.projects.all %}

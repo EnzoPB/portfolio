@@ -269,6 +269,12 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   display: none;
   width: max-content;
 }
+.tooltip.bottom {
+  top: 100%;
+  bottom: initial;
+  margin-bottom: 0;
+  margin-top: 3px;
+}
 
 header {
   padding: 20px;
@@ -419,6 +425,16 @@ header nav.end .button .label {
 .skills-page .categories .skills .skill {
   display: inline-block;
   margin-bottom: 5px;
+}
+@media (max-width: 1100px) {
+  .skills-page .categories .skills .skill {
+    position: initial;
+  }
+  .skills-page .categories .skills .skill .tooltip {
+    top: 0;
+    width: 100%;
+    bottom: initial;
+  }
 }
 
 .project-detail-page {
