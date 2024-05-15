@@ -10,7 +10,7 @@
                 {% for skill in category.skills.all %}
                     <span class="tag skill tooltip-activator">
                         <span>{{ skill.name }}</span>
-                        {% component 'svg' src=skill.icon %}{% endcomponent %}
+                        {{ skill.icon.svg|safe }}
                         <div class="tooltip bottom">
                             {% if skill.detail %}
                                 {{ skill.detail|safe }}

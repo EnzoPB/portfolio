@@ -24,3 +24,6 @@ class SkillAdmin(admin.ModelAdmin):
 @admin.register(SkillCategory)
 class SkillCategoryAdmin(admin.ModelAdmin):
     exclude = ['name']
+
+
+admin.site.register(Icon)

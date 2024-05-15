@@ -6,6 +6,12 @@ def random_filename(instance, filename):
     ext = filename.split('.')[-1]
     return f'{uuid4()}.{ext}'
 
+class Icon(models.Model):
+    name = models.CharField(max_length=50)
+    svg = models.TextField()
+
+    def __str__(self):
+        return self.name
 
 class SkillCategory(models.Model):
     name = models.CharField(max_length=50)
@@ -20,8 +26,8 @@ class SkillCategory(models.Model):
 class Skill(models.Model):
     name = models.CharField(max_length=50)
     detail = models.TextField()
-    icon = models.FileField(upload_to=random_filename)
-    category = models.ForeignKey(SkillCategory, on_delete=models.CASCADE, null=True, related_name='skills')
+    icon = models.ForeignKey(Icon, on_delete=models.SET_NULL, null=True)
+    category = models.ForeignKey(SkillCategory, on_delete=models.SET_NULL, null=True, related_name='skills')
 
     def __str__(self):
         return self.name
@@ -44,7 +50,7 @@ class Project(models.Model):
 class ProjectLink(models.Model):
     label = models.CharField(max_length=50)
     url = models.URLField(max_length=200)
-    icon = models.FileField(upload_to=random_filename)
+    icon = models.ForeignKey(Icon, on_delete=models.SET_NULL, null=True)
     project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='links')
 
     def __str__(self):
