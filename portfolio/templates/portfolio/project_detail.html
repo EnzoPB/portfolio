@@ -5,7 +5,7 @@
     <img class="project-image" src="{{ project.image.url }}" alt="">
     <h2>{{ project.title }}</h2>
     <p class="project-full-description">
-        {{ project.description|linebreaks }}
+        {{ project.description|safe|linebreaks }}
     </p>
     <h3>{% trans 'Used technologies & tools' %}</h3>
     <div class="project-techs">
