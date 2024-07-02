@@ -18,7 +18,7 @@ django-modeltranslation==0.18.11
 django-rq==2.10.2
 django-storages==1.14.2
 django_components==0.67
-djangorestframework==3.15.1
+djangorestframework==3.15.2
 gunicorn==22.0.0
 hyperlink==21.0.0
 idna==3.7
